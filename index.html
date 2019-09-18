@@ -104,23 +104,27 @@
           </ul>
         </div>
       </nav>
-      <div class="input-group mb-3 mt-3 ml-3 mr-3">
-        <input
-          type="text"
-          class="form-control"
-          v-bind:placeholder="yourname"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-        />
-        <div class="input-group-append">
-          <span class="input-group-text" id="basic-addon2">@example.com</span>
+      <template class="ui">
+        <div>
+          <div class="input-group mb-3 mt-3 ml-3 mr-3">
+            <input
+              type="text"
+              class="form-control"
+              v-bind:placeholder="yourname"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+          </div>
+          <div class="mx-auto" style="width: 200px;">
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-plus"><i class="material-icons">face</i></i>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="mx-auto" style="width: 200px;">
-        <button type="button" class="btn btn-primary">
-          <i class="fas fa-plus"><i class="material-icons">face</i></i>
-        </button>
-      </div>
+      </template>
     </div>
     <!-- Vue 的 CDN -->
     <script src="./vue.js"></script>
@@ -135,7 +139,8 @@
           Features: "特色",
           Pricing: "價格",
           Disabled: "停用"
-        }
+        },
+        template: "#ui",
       });
     </script>
   </body>
